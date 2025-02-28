@@ -19,7 +19,7 @@ Clone the repository:
 bash
 Copy
 Edit
-git clone https://github.com/your-username/social-links.git
+git clone https://github.com/EDWARD-012/SOCIAL-LINKS.git
 cd social-links
 Open index.html in your browser
 
