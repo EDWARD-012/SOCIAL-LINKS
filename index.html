@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Links</title>
+    <link rel="icon" type="image/x-icon" href="image.png">
+    <script defer src="https://vercel.com/analytics/script.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #1E1E1E;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background-color: #252525;
+            width: 500px;
+            max-width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 40px;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .box {
+            background-color: #333;
+            width: 100%;
+            max-width: 320px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .box::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, #F4D03F, transparent);
+            top: 0;
+            left: -100%;
+            transition: 0.5s;
+        }
+        .box:hover::before {
+            left: 100%;
+        }
+        .box:hover {
+            background-color: #444;
+            transform: scale(1.05);
+            box-shadow: 0px 0px 8px rgba(244, 208, 63, 0.6);
+        }
+        .box:active {
+            transform: scale(0.98);
+        }
+        .box a {
+            color: #E0E0E0;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+        .box:hover a {
+            color: #F4D03F;
+        }
+        h2 {
+            color: #E0E0E0;
+            text-align: center;
+        }
+        p {
+            color: #B3B3B3;
+            padding: 10px;
+            text-align: center;
+        }
+        .location {
+            color: #F4D03F;
+        }
+        img {
+            height: 100px;
+            margin: 20px;
+            border-radius: 50%;
+            border: 2px solid #F4D03F;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px;
+            }
+            .box {
+                max-width: 100%;
+            }
+            img {
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="image.png" alt="profile">
+        <h2>Ravi Kumar Gupta</h2>
+        <p class="location">West Bengal, India</p>
+        <p>"Code, creativity, and continuous learning."</p>
+        <div class="box"><a href="https://leetcode.com/u/EDWARD7780/" target="_blank">Leetcode</a></div>
+        <div class="box"><a href="https://www.geeksforgeeks.org/user/ravi5i0bf/" target="_blank">GeeksForGeeks</a></div>
+        <div class="box"><a href="https://www.linkedin.com/in/edward7780/" target="_blank">LinkedIn</a></div>
+        <div class="box"><a href="https://x.com/ravirock6257" target="_blank">Twitter</a></div>
+        <div class="box"><a href="https://www.instagram.com/guptaravi_1/" target="_blank">Instagram</a></div>
+    </div>
+</body>
+</html>
