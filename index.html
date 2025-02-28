@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Links</title>
     <link rel="icon" type="image/x-icon" href="profile-pic.png">
+    <link rel="preload" href="profile.jpg" as="image">
     <script defer src="https://vercel.com/analytics/script.js"></script>
     <style>
         * {
@@ -92,13 +93,18 @@
         .location {
             color: #F4D03F;
         }
-        img {
+        .profile-pic {
+            width: 100px;
             height: 100px;
-            margin: 20px;
+            background-image: url('profile.jpg');
+            background-size: cover;
             border-radius: 50%;
             border: 2px solid #F4D03F;
-            object-fit: cover;
         }
+        img {
+            transition: transform 0.5s ease-in-out;
+        }
+
         @media (max-width: 600px) {
             .container {
                 padding: 30px;
@@ -114,7 +120,7 @@
 </head>
 <body>
     <div class="container">
-        <img src="profile-pic.png" alt="profile">
+        <img src="profile.jpg" alt="Profile Picture" loading="lazy" onerror="this.src='placeholder.jpg';">
         <h2>Ravi Kumar Gupta</h2>
         <p class="location">West Bengal, India</p>
         <p>"Code, creativity, and continuous learning."</p>
